@@ -1,6 +1,7 @@
 package com.example.easyfood.retrofit
 
 import android.telecom.Call
+import com.example.easyfood.pojo.CategoryList
 import com.example.easyfood.pojo.MealList
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -12,5 +13,8 @@ interface MealApi {
 
     @GET("lookup.php?")
     fun getMealDetails(@Query("i") id:String) : retrofit2.Call<MealList>
+
+    @GET("filter.php?")
+    fun getPopularItems(@Query("c") categoryName: String) : retrofit2.Call<CategoryList>
 
 }
