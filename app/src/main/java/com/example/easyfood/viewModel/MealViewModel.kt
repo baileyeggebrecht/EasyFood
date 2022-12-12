@@ -39,15 +39,11 @@ class MealViewModel(
     fun observeMealDetailsLiveData():LiveData<Meal> {
         return mealDetailsLiveData
     }
+
     fun insertMeal(meal:Meal) {
         viewModelScope.launch {
             mealDatabase.mealDao().upsert(meal)
         }
     }
 
-    fun deleteMeal(meal:Meal) {
-        viewModelScope.launch {
-            mealDatabase.mealDao().delete(meal)
-        }
-    }
 }
