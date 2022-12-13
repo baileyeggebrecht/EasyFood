@@ -21,6 +21,7 @@ import com.example.easyfood.databinding.FragmentHomeBinding
 import com.example.easyfood.fragments.HomeFragment.Companion.MEAL_ID
 import com.example.easyfood.fragments.HomeFragment.Companion.MEAL_NAME
 import com.example.easyfood.fragments.HomeFragment.Companion.MEAL_THUMB
+import com.example.easyfood.fragments.bottomsheet.MealBottomSheetFragment
 import com.example.easyfood.pojo.MealsByCategory
 import com.example.easyfood.pojo.Meal
 import com.example.easyfood.viewModel.HomeViewModel
@@ -74,9 +75,18 @@ class HomeFragment : Fragment() {
         observeCategoriesLiveData()
         onCategoryClick()
 
+        onPopularItemLongClick()
 
 
 
+
+    }
+
+    private fun onPopularItemLongClick() {
+        popularItemsAdapter.onLongItemClick = { meal ->
+            val mealBottomSheetFragment = MealBottomSheetFragment.newInstance(meal.idMeal)
+            mealBottomSheetFragment.show(childFragmentManager, "Meal Info")
+        }
     }
 
     private fun onCategoryClick() {
