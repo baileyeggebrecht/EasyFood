@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/rounded_top_shape.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/search_box_background.xml" value="0.1" />
         <entry key="app/src/main/res/font/fonts.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_category_meals.xml" value="0.12454710144927536" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
@@ -13,6 +14,7 @@
         <entry key="app/src/main/res/layout/fragment_favorites.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_meal_bottom_sheet.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.11145833333333334" />
         <entry key="app/src/main/res/layout/meal_item.xml" value="0.14788732394366197" />
         <entry key="app/src/main/res/layout/popular_items.xml" value="0.1265625" />
         <entry key="app/src/main/res/menu/btm_mnu.xml" value="0.1" />

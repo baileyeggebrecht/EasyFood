@@ -9,9 +9,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
+import com.example.easyfood.R
 import com.example.easyfood.activities.CategoryMealsActivity
 import com.example.easyfood.activities.MainActivity
 import com.example.easyfood.activities.MealActivity
@@ -77,9 +79,17 @@ class HomeFragment : Fragment() {
 
         onPopularItemLongClick()
 
+        onSearchItemClick()
 
 
 
+
+    }
+
+    private fun onSearchItemClick() {
+        binding.imgSearch.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_searchFragment)
+        }
     }
 
     private fun onPopularItemLongClick() {
