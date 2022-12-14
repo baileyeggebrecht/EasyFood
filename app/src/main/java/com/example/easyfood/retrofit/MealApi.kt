@@ -10,10 +10,10 @@ interface MealApi {
     @GET("random.php")
     fun getRandomMeal(): retrofit2.Call<MealList>
 
-    @GET("lookup.php?")
+    @GET("lookup.php")
     fun getMealDetails(@Query("i") id:String) : retrofit2.Call<MealList>
 
-    @GET("filter.php?")
+    @GET("filter.php")
     fun getPopularItems(@Query("c") categoryName: String) : retrofit2.Call<MealsByCategoryList>
 
     @GET("categories.php")
